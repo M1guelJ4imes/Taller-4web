@@ -8,13 +8,13 @@
 </head>
 
 <body>
-    <form>
+    <form id="registroForm">
         <section class="form-re">
             <h4>Formulario de Registro</h4>
-            <input class="controls" required="" type="text" name="number" id="number" placeholder="Ingresa tu codigo">
-            <label for="Pais">Pais</label>
-            <select class="controls" name="Pais" id="Pais">
-                <option value="" disabled selected hidden>Selecciona tu Pais</option>
+            <input class="controls" required type="text" name="number" id="number" placeholder="Ingresa tu código">
+            <label for="Pais">País</label>
+            <select class="controls" name="Pais" id="Pais" required>
+                <option value="" disabled selected hidden>Selecciona tu País</option>
                 <option value="Argentina">Argentina</option>
                 <option value="Bolivia">Bolivia</option>
                 <option value="Brasil">Brasil</option>
@@ -27,25 +27,53 @@
                 <option value="Uruguay">Uruguay</option>
                 <option value="Venezuela">Venezuela</option>
             </select>
-            <input class="controls" required="" type="text" name="Nombre" id="Nombre" placeholder="Ingrese su nombre">
-            <input class="controls" required="" type="text" name="Apllido" id="Apellido" placeholder="Ingrese su Apellido">
-            <input class="controls" required="" type="text" name="Direccion" id="Direccion" placeholder="Ingrese su Direccion">
-            <input class="controls" required="" type="text" name="Cedula" id="Cedula" placeholder="Ingresa tu Cedula">
-            <input class="controls" required="" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña">
-            <input class="controls" required="" type="email" name="email" id="email" placeholder="Ingrese su Correo">
-            <input class="controls" required="" type="tel" name="telefo" id="telefo" placeholder="Ingrese su Telefono">
+            <input class="controls" required type="text" name="Nombre" id="Nombre" placeholder="Ingrese su nombre">
+            <input class="controls" required type="text" name="Apellido" id="Apellido" placeholder="Ingrese su Apellido">
+            <input class="controls" required type="text" name="Direccion" id="Direccion" placeholder="Ingrese su Dirección">
+            <input class="controls" required type="text" name="Cedula" id="Cedula" placeholder="Ingresa tu Cédula">
+            <input class="controls" required type="password" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña">
+            <input class="controls" required type="password" name="confirmarContraseña" id="confirmarContraseña" placeholder="Confirme su Contraseña">
+            <input class="controls" required type="email" name="email" id="email" placeholder="Ingrese su Correo">
+            <input class="controls" required type="tel" name="telefono" id="telefono" placeholder="Ingrese su Teléfono">
+            <input type="radio" name="gustos" value="color" id="colorRadio"> ¿Desea decirnos sus gustos para mejorar su experiencia?<br>
 
-            <label for="gustos">¿Qué le gusta?</label>
-            <input type="radio" name="gustos" value="color" id="colorRadio"> Color favorito<br>
-            <input type="radio" name="gustos" value="marca" id="marcaRadio"> Marca de carro favorita<br>
-            <input type="radio" name="gustos" value="estilo" id="estiloRadio"> Estilo de carro favorito<br>
-            <input type="radio" name="gustos" value="modelo" id="modeloRadio"> Modelo de carro que más le gusta<br>
             
-            <label for="valorCarro">Valor máximo dispuesto a gastar en un vehículo:</label>
-            <input type="range" id="valorCarro" name="valorCarro" min="0" max="100000" step="1000">
-            
+            <section class="colorInput" id="colorInput">
+                <!-- Campo para color favorito -->
+                <label for="colorFavorito">Color favorito:</label>
+                <input type="text" name="colorFavorito" id="colorFavorito" placeholder="Ingrese su color favorito"><br>
+                <label for="marcaCarro">Marca de carro favorita:</label>
+                <input type="text" name="marcaCarro" id="marcaCarro" placeholder="Ingrese su marca de carro favorita"><br>
+                <label for="estiloCarro">Estilo de carro favorito:</label>
+                <input type="text" name="estiloCarro" id="estiloCarro" placeholder="Ingrese su estilo de carro favorito"><br>
+                <label for="modeloCarro">Modelo de carro favorito:</label>
+                <input type="text" name="modeloCarro" id="modeloCarro" placeholder="Ingrese el modelo de carro que más le gusta"><br>
+
+                <br><label for="gustos">¿Cual es el valor máximo y mínimo que estaría dispuesto a gastar en un vehículo</label><br>
+                <label for="gustos">Tenga en cuenta que el rango va de 1 millon a 100 millones</label><br>
+                <div class="range_container">
+                    
+                  <div class="sliders_control">
+                      <input id="fromSlider" type="range" value="10" min="0" max="100"/>
+                      <input id="toSlider" type="range" value="40" min="0" max="100"/>
+                  </div>
+                  <div class="form_control">
+                      <div class="form_control_container">
+                          <div class="form_control_container__time">Min</div>
+                          <input class="form_control_container__time__input" type="number" id="fromInput" value="10" min="0" max="100"/>
+                      </div>
+                      <div class="form_control_container">
+                          <div class="form_control_container__time">Max</div>
+                          <input class="form_control_container__time__input" type="number" id="toInput" value="40" min="0" max="100"/>
+                      </div>
+                  </div>
+              </div>
+            </section><br>
+
             <input class="boton" type="submit" value="Registrar">
         </section>
     </form>
+
+    <script src="script.js"></script>
 </body>
 </html>
