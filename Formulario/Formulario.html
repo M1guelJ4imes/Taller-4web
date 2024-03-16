@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <section class="form-re">
+            <h4>Formulario de Registro</h4>
+            <input class="controls" required="" type="text" name="number" id="number" placeholder="Ingresa tu codigo">
+            <label for="Pais">Pais</label>
+            <select class="controls" name="Pais" id="Pais">
+                <option value="" disabled selected hidden>Selecciona tu Pais</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Bolivia">Bolivia</option>
+                <option value="Brasil">Brasil</option>
+                <option value="Chile">Chile</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="Guyana">Guyana</option>
+                <option value="Perú">Perú</option>
+                <option value="Surinam">Surinam</option>
+                <option value="Uruguay">Uruguay</option>
+                <option value="Venezuela">Venezuela</option>
+            </select>
+            <input class="controls" required="" type="text" name="Nombre" id="Nombre" placeholder="Ingrese su nombre">
+            <input class="controls" required="" type="text" name="Apllido" id="Apellido" placeholder="Ingrese su Apellido">
+            <input class="controls" required="" type="text" name="Direccion" id="Direccion" placeholder="Ingrese su Direccion">
+            <input class="controls" required="" type="text" name="Cedula" id="Cedula" placeholder="Ingresa tu Cedula">
+            <input class="controls" required="" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña">
+            <input class="controls" required="" type="email" name="email" id="email" placeholder="Ingrese su Correo">
+            <input class="controls" required="" type="tel" name="telefo" id="telefo" placeholder="Ingrese su Telefono">
+
+            <label for="gustos">¿Qué le gusta?</label>
+            <input type="radio" name="gustos" value="color" id="colorRadio"> Color favorito<br>
+            <input type="radio" name="gustos" value="marca" id="marcaRadio"> Marca de carro favorita<br>
+            <input type="radio" name="gustos" value="estilo" id="estiloRadio"> Estilo de carro favorito<br>
+            <input type="radio" name="gustos" value="modelo" id="modeloRadio"> Modelo de carro que más le gusta<br>
+            
+            <label for="valorCarro">Valor máximo dispuesto a gastar en un vehículo:</label>
+            <input type="range" id="valorCarro" name="valorCarro" min="0" max="100000" step="1000">
+            
+            <input class="boton" type="submit" value="Registrar">
+        </section>
+    </form>
+</body>
+</html>
