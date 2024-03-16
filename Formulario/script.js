@@ -82,6 +82,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 colorInput.style.display = 'none';
             }
         }
+        cedulaInput.addEventListener('input', function (event) {
+            const inputValue = event.target.value;
+            // Remover caracteres que no son números
+            event.target.value = inputValue.replace(/\D/g, '');
+        });
     });
 
     // Función para mostrar el campo de color favorito cuando se selecciona "Color favorito"
